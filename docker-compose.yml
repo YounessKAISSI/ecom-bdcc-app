@@ -73,3 +73,10 @@ services:
     depends_on:
       enset-config-service:
         condition: service_healthy
+  frontend-angular:
+    build: ./Angular-Frontend
+    container_name: frontend-angular
+    ports:
+      - '80:80'
+    expose:
+      - '80'
